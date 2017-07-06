@@ -18,6 +18,11 @@ npm install \
     react \
     react-dom \
 --save-dev
+# React Router
+npm install \
+    react-router \
+    react-router-dom \
+--save
 # Babel
 npm install \
     babel-core \
