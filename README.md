@@ -8,8 +8,10 @@ These are the following scripts, and how to use them.
 
 |Script|Function|
 |:-----|:-------|
-|`init-app`|creates a basic webapp with [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/) & [Webpack](https://webpack.js.org/)|
+|`init-webapp`|creates a basic webapp with [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/) & [Webpack](https://webpack.js.org/)|
+|`init-webpack`|creates|
 |`init-react`|creates a bare bones react application, based on top of an existing node webapp (pre-requisite: run `init-app`|
+|`init-express`||
 |`artifact-build`|builds an artifact from `src` folder, using webpack... output directory is `./artifact`|
 |`artifact-deploy`|simulates a web deploy on your local machine, to test behaviour of webapp, before going to production|
 
