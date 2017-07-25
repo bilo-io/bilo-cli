@@ -1,0 +1,9 @@
+node_modules/
+artifact/
+dist/
+src/
+
+README_default.md
+package.json
+.babelrc
+webpack.config.js

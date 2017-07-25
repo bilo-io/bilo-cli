@@ -4,16 +4,16 @@ This is a repo containing scripts to automate various tasks for frontend project
 
 There is a variant of each script for **powershell** (`.ps1`) and **bash** (`.sh`).
 
-These are the following scripts, and how to use them.
+The table below lists these scripts and their effects.
 
 |Script|Function|
 |:-----|:-------|
+|`build-artifact`|builds an artifact from `src` folder, using webpack... output directory is `./artifact`|
+|`deploy-artifact`|simulates a  web deployment on your local machine - _(useful to test before production)_|
 |`init-webapp`|creates a basic webapp with [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/) & [Webpack](https://webpack.js.org/)|
-|`init-webpack`|creates|
+|`init-webpack`|adds webpack to an existing NodeJS application|
 |`init-react`|creates a bare bones react application, based on top of an existing node webapp (pre-requisite: run `init-app`|
-|`init-express`||
-|`artifact-build`|builds an artifact from `src` folder, using webpack... output directory is `./artifact`|
-|`artifact-deploy`|simulates a web deploy on your local machine, to test behaviour of webapp, before going to production|
+|`init-express`|adds `express` & `express-history-api-fallback` to an existing NodeJS application|
 
 # Background
 
