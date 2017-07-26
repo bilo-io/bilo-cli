@@ -58,10 +58,10 @@ Below is a full list of commands provided by the `bilo` CLI.
 
 |command|effect|
 |:-|:-|
-|`a | app`|creates a [Node (v6)](https://nodejs.org) webapp|
-|`b | build`|N/A|builds a production package using webpack|
-|`c | clean`|N/A|cleans the directory, removing all generated folders, while leaving `src` and required files untouched|
-|`d | deploy`|N/A|deploys the generated `artifact` to a local directory, simulating the prod environment|
+|` a ` **OR** ` app`|creates a [Node (v6)](https://nodejs.org) webapp|
+|`b ` **OR** ` build`|builds a production package using webpack|
+|`c` **OR** `clean`|cleans the directory, removing all generated folders, while leaving `src` and required files untouched|
+|`d` **OR** `deploy`|deploys the generated `artifact` to a local directory, simulating the prod environment|
 |`express`|adds [Express](https://expressjs.com/), a minimalist web framework for NodeJS|
 |`ng2`|adds [Angular 2](http://angular.io), a framework for dynamic web apps|
 |`react`|adds [ReactJS](https://facebook.github.io/react/), a library for building frontend web applications|
