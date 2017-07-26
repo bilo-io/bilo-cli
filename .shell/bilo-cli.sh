@@ -1,30 +1,28 @@
 #!/bin/bash
 . ./.shell/sh/_colors.sh
 UTIL_NAME='
-                                                                    
-    _/        _/  _/                                  _/  _/
-   _/_/_/_/      _/   _/_/_/                 _/_/_/  _/     
-  _/    _/  _/  _/  _/    _/    _/_/_/    _/        _/  _/  
- _/_/_/_/  _/  _/   _/_/_/                 _/_/_/  _/  _/                                                               
+______ ___________                  __________ 
+___  /____(_)__  /_____       _________  /__(_)
+__  __ \_  /__  /_  __ \_______  ___/_  /__  / 
+_  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /  
+/_.___//_/  /_/  \____/       \___/ /_/  /_/                                                             
 '
 WELCOME_MESSAGE='
 Use this CLI to rapidly setup frontend and backend projects!
 ------------------------------------------------------------'
 HELP_MENU='
     possible console commands:
-
-        bilo)           shows this help menu
         
-        -build)          builds src folder using webpack
-        -clean)          removes folders: node_modules, artifact & dist
-        -deploy)         deploys production package locally
+        a | app)            initializes webapp with NodeJS & SASS
+        b | build)          builds src folder using webpack
+        c | clean)          removes folders: node_modules, artifact & dist
+        d | deploy)         deploys production package locally
 
-        app)       initializes webapp with NodeJS & SASS
-        express)   adds express to webapp
-        react)     adds react to webapp
-        webpack)   adds Webpack to webapp
+        express)            adds express to webapp
+        react)              adds react to webapp
+        webpack)            adds Webpack to webapp
 
-'
+Enter command: '
 Docs() {
     setColor cyan
     echo "$UTIL_NAME"
@@ -33,27 +31,26 @@ Docs() {
     echo "$WELCOME_MESSAGE"
 
     setColor white
-    echo "$HELP_MENU"
+    echo -ne "$HELP_MENU"
 }
-Docs
-
-resetColor
-
-
 function InitApp() {
-    echo "initialising app"
+    # setColor cyan-l
+    # echo " => init-app"
     bash ./.shell/sh/init-app.sh
 }
 InitExpress() {
-    echo "initialising express"
+    # setColor cyan-l
+    # echo " => init-express"
     bash ./.shell/sh/init-express.sh
 }
 InitReact() {
-    echo "initialising react"
+    # setColor cyan-l
+    # echo " => init-react"
     bash ./.shell/sh/init-react.sh        
 }
 InitWebpack() {
-    echo "initialising webpack"
+    # setColor cyan-l
+    # echo " => init-webpack"
     bash ./.shell/sh/init-webpack.sh
 }
 Menu() {
@@ -78,8 +75,16 @@ Menu() {
         esac
         shift
 }
-read userCommand
-Menu $userCommand
+
+Docs
+resetColor
+
+if [ $# -gt 0 ]; then
+    Menu $1
+else
+    read userCommand
+    Menu $userCommand
+fi
 # while [ $# -gt 0 ]
 # do
 # done

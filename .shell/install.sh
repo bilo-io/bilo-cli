@@ -1,17 +1,19 @@
 #!/bin/bash
 . ./.shell/sh/_colors.sh
+
 name=$1
 [[ -z "${name// }" ]] && name="bilo"
 clear
 
-UTIL_NAME='                                                                    
-    _/        _/  _/                                  _/  _/
-   _/_/_/_/      _/   _/_/_/                 _/_/_/  _/     
-  _/    _/  _/  _/  _/    _/    _/_/_/    _/        _/  _/  
- _/_/_/_/  _/  _/   _/_/_/                 _/_/_/  _/  _/                                                               
+UTIL_NAME="
+______ ___________                  __________ 
+___  /____(_)__  /_____       _________  /__(_)
+__  __ \_  /__  /_  __ \_______  ___/_  /__  / 
+_  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /  
+/_.___//_/  /_/  \____/       \___/ /_/  /_/    
 
-Setup ... 
-'
+ => setup: '$name' ... 
+"
 setColor cyan
 echo "$UTIL_NAME"
 
@@ -27,20 +29,28 @@ echo "[!] installing '$name' CLI requires authorisation:"
 
 setColor red-l
 echo "[-] del /usr/local/bin/.shell (old)"
+resetColor
 sudo rm -rf /usr/local/bin/.shell 
 
 setColor green-l
 echo "[+] add /usr/local/bin/.shell (update)"
+resetColor
 sudo mkdir /usr/local/bin/.shell
 
 setColor blue-l
 echo "[.] copy scripts to /usr/local/bin/.shell"
+resetColor
 sudo cp -r ./.shell/sh /usr/local/bin/.shell/
 
-setColor green
+cwd=$(pwd)
+
+setColor cyan -l
 echo "
+ => '$name' CLI installed successfully
 
- => $name CLI installed successfully
-
-" 
+ ... run:"
+setColor white
+echo "
+$USER$ $name 
+"
 resetColor

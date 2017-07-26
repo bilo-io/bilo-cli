@@ -1,9 +1,7 @@
 . ./.shell/sh/_colors.sh
 
-setColor green
-echo '==================================================='
-echo ' (init-webpack): installing dependencies'
-echo '---------------------------------------------------'
+setColor cyan-l
+echo ' => init-webpack ...'
 resetColor
 npm install \
     webpack \
@@ -17,9 +15,7 @@ npm install \
 --save-dev 
 
 setColor green
-echo '==================================================='
-echo ' (init-webpack) adding webpack.config'
-echo '---------------------------------------------------'
+echo '[+] webpack.config.js'
 resetColor
 
 echo "
@@ -66,11 +62,9 @@ var config = {
     }
 }
 " > webpack.config.js
-
-setColor green
-echo '==================================================='
-echo ' (init-webpack):    done'
-echo '==================================================='
+setColor cyan-l
+echo ' => init-webpack: done'
+resetColor
 
 setColor orange
 echo ' 

@@ -77,3 +77,9 @@ function docsColors {
     printf "$1"
     resetColor
 }
+
+function colorEcho {
+    setColor $1
+    echo "$2"
+    resetColor
+}
