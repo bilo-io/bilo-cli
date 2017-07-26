@@ -40,14 +40,25 @@ function assignColor {
 function setColor {
     case $1 in
         "black") assignColor $BLACK;;
-        "red") assignColor $RED;;
-        "green") assignColor $GREEN;;
-        "orange") assignColor $ORANGE;;
-        "blue") assignColor $BLUE;;
-        "purple") assignColor $PURPLE;;
-        "cyan") assignColor $CYAN;;
-        "green") assignColor $GREEN;;
         "white") assignColor $WHITE;;
+
+        "red") assignColor $RED;;
+        "red-l") assignColor $RED_LIGHT;;
+        "green") assignColor $GREEN;;
+        "green-l") assignColor $GREEN_LIGHT;;
+
+        "orange") assignColor $ORANGE;;
+        "yellow") assignColor $YELLOW;;
+        
+        "blue") assignColor $BLUE;;
+        "blue-l") assignColor $BLUE_LIGHT;;
+        
+        "purple") assignColor $PURPLE;;
+        "purple-l") assignColor $PURPLE_LIGHT;;
+        
+        "cyan") assignColor $CYAN;;
+        "cyan-l") assignColor $CYAN_LIGHT;;
+        
         "*")
             assignColor red 
             echo -e "$1 is not a registered color"
@@ -58,7 +69,7 @@ function setColor {
 }
 
 function resetColor {
-    echo -e "${WHITE}"
+    printf "${NONE}"
 }
 
 function docsColors {

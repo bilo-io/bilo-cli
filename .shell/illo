@@ -4,7 +4,7 @@ UTIL_NAME='
                                                                     
     _/        _/  _/                                  _/  _/
    _/_/_/_/      _/   _/_/_/                 _/_/_/  _/     
-  _/    _/  _/  _/  _/    _/    _/_/_/    _/        _/  _/  
+  _/    _/  _/  _/  _/    _/  _/_/_/_/_/  _/        _/  _/  
  _/_/_/_/  _/  _/   _/_/_/                 _/_/_/  _/  _/                                                               
 '
 WELCOME_MESSAGE='
@@ -15,14 +15,14 @@ HELP_MENU='
 
         bilo)           shows this help menu
         
-        -build)          builds src folder using webpack
-        -clean)          removes folders: node_modules, artifact & dist
-        -deploy)         deploys production package locally
+        build)          builds src folder using webpack
+        clean)          removes folders: node_modules, artifact & dist
+        deploy)         deploys production package locally
 
-        app)       initializes webapp with NodeJS & SASS
-        express)   adds express to webapp
-        react)     adds react to webapp
-        webpack)   adds Webpack to webapp
+        init-app)       initializes webapp with NodeJS & SASS
+        init-express)   adds express to webapp
+        init-react)     adds react to webapp
+        init-webpack)   adds Webpack to webapp
 
 '
 Docs() {
@@ -57,21 +57,18 @@ InitWebpack() {
     bash ./.shell/sh/init-webpack.sh
 }
 Menu() {
+        echo "Menu:"
         arg=$1
         echo "$arg"
         case "$arg" in
                 -h|-help) clear; echo "$usage" ;;
                 -v|-version) clear; echo $atlasVersion;;
-                h|help) Docs;;
-                
-                a|app) InitApp;;
-                b|build) bash ./.shell/sh/build.sh;;
-                c|clean) bash ./.shell/sh/clean.sh;;
-                d|deploy) bash ./.shell/sh/deploy.sh;;
 
-                express) InitExpress;;
-                react) InitReact;;
-                webpack) InitWebpack;;
+                h|help) Docs;;
+                init-app) InitApp;;
+                init-express) InitExpress;;
+                init-react) DInitReact;;
+                init-webpack) InitWebpack;;
 
                 --) shift;;  # no more options
                 *) exit 0;; # not option, its some argument
