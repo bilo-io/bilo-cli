@@ -1,9 +1,61 @@
-# FED Scripts
+# Bilo-CLI
 
-This is a repo containing scripts to automate various tasks for frontend projects.
+This is a repo containing scripts to automate various tasks for NodeJS projects.
+These tasks have all been combined into a *CLI* (command line interface), called `bilo`.
 
+>- Currently, there is only the functionality to create frontend projects
+>- An item has been created for initialising server projects as well
+
+## Quickstart
+
+You can install the CLI on Windows & Linux based machines as follows:
+
+**MacOS/Linux** (`bash`)
+- `git clone https://github.com/bilo-io/bilo-cli`
+- `cd ./bilo-cli`
+- `bash ./.shell/install-bilo-cli.sh`
+
+> Optional: You give this cli an alias as too (e.g. with the alias `my-cli`)
+> e.g. `bash ./.shell/install-bilo-cli.sh my-cli`
+> by default, the `cli` is called `bilo`
+
+**Windows** (`powershell`)
+> TODO: still need to create the `install-bilo-cli.ps1` script
+
+## Usage
+
+The CLI can be used to create NodeJS applications, where you can add Express, Webpack, React & Angular.
+Below is an example for how to create a webapplication in a newly created, empty folder.
+
+>NOTE: This actual `cli` still needs to be created, but the underlying functionality is already in place.
+- `mkdir ExampleApp`
+- `cd ./ExampleApp`
+- `bilo` OR `bilo -h` OR `bilo -help`
+    - shows all commands available in the cli
+- `bilo init-app`
+    - this will add a the `src` in the root folder, as well as create an `npm package`
+- `bilo init-webpack`
+    - this will add `webpack` to and create a `webpack.config.js` in your project root
+- `bilo build`
+
+## CLI Commands
+
+Below is a full list of commands provided by the `bilo` CLI.
+
+
+|Command|Flags|Description|
+|:-|:-|:-|
+|`bilo`|`-h` OR `-help`|shows help page|
+
+||||
+|:-|:-|:-|
+|`build`|N/A|builds a production package using webpack|
+|`clean`|N/A|cleans the directory, removing all generated folders, while leaving `src` and required files untouched|
+|`deploy`|N/A|deploys the generated `artifact` to a local directory, simulating the prod environment|
+
+
+## Features
 There is a variant of each script for **powershell** (`.ps1`) and **bash** (`.sh`).
-
 The table below lists these scripts and their effects.
 
 |Script|Function|
@@ -16,6 +68,6 @@ The table below lists these scripts and their effects.
 |`init-react`|creates a bare bones [ReactJS]() application, based on top of an existing node webapp (pre-requisite: run `init-webapp`|
 |`init-express`|adds [Express](https://expressjs.com/) & `express-history-api-fallback` to an existing NodeJS application|
 
-# Background
+## Background
 
 This is a quick re-cap of what [React](https://facebook.github.io/react/), [NodeJS](https://nodejs.org/en/), [Express](https://expressjs.com/) & [Webpack](https://webpack.js.org/) are, and what problems they solve.
