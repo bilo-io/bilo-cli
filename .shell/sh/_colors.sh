@@ -1,12 +1,51 @@
 #!/bin/bash
-# grep --color=auto
-# ls --color=auto
-# setterm -term linux -fore cyan -clear
+#docs: https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 
-LS_COLORS='rs=0:di=1;35:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
-export LS_COLORS
+BLACK='\e[0;30m'
 
-ls
-pwd
 
-echo "This is a color test"
+RED='\e[0;31m'
+RED_LIGHT='\e[1;31m'
+GREEN='\e[0;32m'
+GREEN_LIGHT='\e[1;32m'
+ORANGE='\e[0;33m'
+YELLOW='\e[1;33m'
+BLUE='\e[0;34m'
+BLUE_LIGHT='\e[1;34m'
+PURPLE='\e[0;35m'
+PURPLE_LIGHT='\e[1;35m'
+CYAN='\e[0;36m'
+CYAN_LIGHT='\e[1;36m'
+GRAY='\e[0;37m'
+WHITE='\e[1;37m'
+
+YELLOW='\e[1;33m'
+NONE='\e[0;0m'
+
+DOCS_COLORS="
+Color Codes:${WHITE}
+
+    Black        0;30     Dark Gray     1;30${RED}
+    Red          0;31     ${RED_LIGHT}Light Red     1;31${GREEN}
+    Green        0;32     ${GREEN_LIGHT}Light Green   1;32${ORANGE}
+    Orange       0;33     ${YELLOW}Yellow        1;33${BLUE}
+    Blue         0;34     Light Blue    1;34${PURPLE}
+    Purple       0;35     Light Purple  1;35${CYAN}
+    Cyan         0;36     Light Cyan    1;36${GRAY}
+    Light Gray   0;37     White         1;37
+"
+
+function setColor {
+    printf "${GREEN}"
+}
+
+function resetColor {
+    echo -e "${WHITE}"
+}
+
+function docsColors {
+    printf "$DOCS_COLORS"
+    resetColor
+}
+
+docsColors
