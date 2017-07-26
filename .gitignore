@@ -3,6 +3,7 @@ artifact/
 dist/
 src/
 
+.shell/ghost
 README_default.md
 package.json
 .babelrc
