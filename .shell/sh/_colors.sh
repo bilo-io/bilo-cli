@@ -38,7 +38,6 @@ function assignColor {
 }
 
 function setColor {
-    echo -e "Setting Color: $1"
     case $1 in
         "black") assignColor $BLACK;;
         "red") assignColor $RED;;

@@ -1,6 +1,10 @@
+. ./.shell/sh/_colors.sh
+
+setColor green
 echo '==================================================='
-echo ' (init-webpack)'
+echo ' (init-webpack): installing dependencies'
 echo '---------------------------------------------------'
+resetColor
 npm install \
     webpack \
     # webpack-dev-server \
@@ -11,9 +15,13 @@ npm install \
     # html-webpack-plugin \
     # node-sass \
 --save-dev 
+
+setColor green
 echo '==================================================='
 echo ' (init-webpack) adding webpack.config'
 echo '---------------------------------------------------'
+resetColor
+
 echo "
 var path = require('path');
 var webpack = require('webpack');
@@ -58,10 +66,14 @@ var config = {
     }
 }
 " > webpack.config.js
+
+setColor green
 echo '==================================================='
 echo ' (init-webpack):    done'
-echo ' 
+echo '==================================================='
 
+setColor orange
+echo ' 
 NOTE: 
 
 add the following to the "scripts" node in package.json: 
@@ -74,4 +86,4 @@ scripts: {
     // ...
 }
 '
-echo '==================================================='
+resetColor

@@ -1,16 +1,18 @@
 #!/bin/bash
 . ./.shell/sh/_colors.sh
 
-setColor
+setColor "green"
 echo '==================================================='
 echo ' (init-webapp): creating webapp'
 echo '---------------------------------------------------'
+resetColor
 echo ' + src/'
 echo '---------------------------------------------------'
 mkdir src
 mkdir src/app
 mkdir src/img
 mkdir src/sass
+resetColor
 
 echo "
 <!DOCTYPE html>
@@ -22,9 +24,11 @@ echo "
         <h1>Hello World!</h1>
     </body>
 </html>" > src/index.html
+setColor "green"
 echo '==================================================='
 echo ' (init-webapp): creating README.md'
 echo '---------------------------------------------------'
+resetColor
 
 echo "# Project Readme
 
@@ -54,10 +58,16 @@ Rename this file to \"README.md\".
 > - Provide a list of features 
 > - Ideally with screenshots
 " > README_default.md
+
+setColor "green"
 echo '==================================================='
 echo ' (init-webapp):   creating node app'
 echo '---------------------------------------------------'
+resetColor
+
 # npm init
+setColor "green"
 echo '==================================================='
 echo ' (init-webapp):    done'
 echo '==================================================='
+resetColor
