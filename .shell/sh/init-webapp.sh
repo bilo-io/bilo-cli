@@ -1,4 +1,7 @@
 #!/bin/bash
+. ./.shell/sh/_colors.sh
+
+setColor
 echo '==================================================='
 echo ' (init-webapp): creating webapp'
 echo '---------------------------------------------------'
@@ -54,7 +57,7 @@ Rename this file to \"README.md\".
 echo '==================================================='
 echo ' (init-webapp):   creating node app'
 echo '---------------------------------------------------'
-npm init
+# npm init
 echo '==================================================='
 echo ' (init-webapp):    done'
 echo '==================================================='

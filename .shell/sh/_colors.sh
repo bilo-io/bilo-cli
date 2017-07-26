@@ -2,8 +2,6 @@
 #docs: https://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux
 
 BLACK='\e[0;30m'
-
-
 RED='\e[0;31m'
 RED_LIGHT='\e[1;31m'
 GREEN='\e[0;32m'
@@ -35,8 +33,29 @@ Color Codes:${WHITE}
     Light Gray   0;37     White         1;37
 "
 
+function assignColor {
+    printf $1
+}
+
 function setColor {
-    printf "${GREEN}"
+    echo -e "Setting Color: $1"
+    case $1 in
+        "black") assignColor $BLACK;;
+        "red") assignColor $RED;;
+        "green") assignColor $GREEN;;
+        "orange") assignColor $ORANGE;;
+        "blue") assignColor $BLUE;;
+        "purple") assignColor $PURPLE;;
+        "cyan") assignColor $CYAN;;
+        "green") assignColor $GREEN;;
+        "white") assignColor $WHITE;;
+        "*")
+            assignColor red 
+            echo -e "$1 is not a registered color"
+            resetColor
+            exit 1
+            ;;
+    esac
 }
 
 function resetColor {
@@ -44,8 +63,7 @@ function resetColor {
 }
 
 function docsColors {
-    printf "$DOCS_COLORS"
+    echo "Color $1"
+    printf "$1"
     resetColor
 }
-
-docsColors
