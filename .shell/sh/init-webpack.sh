@@ -1,19 +1,20 @@
 echo '==================================================='
 echo ' (init-webpack)'
 echo '---------------------------------------------------'
-npm install --save-dev \
+npm install \
     webpack \
-    webpack-dev-server \
-    css-loader \
-    style-loader \
-    sass-loader \
-    file-loader \
-    html-webpack-plugin \
-    node-sass \
+    # webpack-dev-server \
+    # css-loader \
+    # style-loader \
+    # sass-loader \
+    # file-loader \
+    # html-webpack-plugin \
+    # node-sass \
+--save-dev 
 echo '==================================================='
 echo ' (init-webpack) adding webpack.config'
 echo '---------------------------------------------------'
-echo '
+echo "
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -56,7 +57,21 @@ var config = {
         stats: 'minimal'
     }
 }
-' > webpack.config.js
+" > webpack.config.js
 echo '==================================================='
 echo ' (init-webpack):    done'
+echo ' 
+
+NOTE: 
+
+add the following to the "scripts" node in package.json: 
+
+scripts: {
+    
+    "start": "webpack-dev-server --inline --progress --port 8080",
+    "build": "webpack -p",
+
+    // ...
+}
+'
 echo '==================================================='

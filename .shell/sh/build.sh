@@ -1,3 +1,4 @@
+# clean
 rm -rf artifact dist
 npm run build
 mkdir artifact
