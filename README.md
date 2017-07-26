@@ -21,7 +21,7 @@ You can install the CLI on Windows & Linux based machines as follows:
 > Optional: 
 > - by default, the cli is called `bilo`
 > - you can give this CLI an alias (e.g. `my-cli`)
-> - provide the alias as an argument: `bash ./.shell/install-bilo-cli.sh my-cli`
+> - provide the alias as an argument: `bash ./.shell/install.sh my-cli`
 
 ### Run
 
