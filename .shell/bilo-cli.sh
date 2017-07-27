@@ -45,8 +45,8 @@ Menu() {
                 c|clean)    bash ./.shell/sh/tasks/_clean.sh;;
                 d|deploy)   bash ./.shell/sh/tasks/_deploy.sh;;
                 # Project Templates
-                webapp)     bash ./.shell/sh/_create-webapp.sh;;
-                webapi)     bash ./.shell/sh/_create-webapi.sh;;
+                webapp)     bash ./.shell/sh/create-webapp.sh;;
+                webapi)     bash ./.shell/sh/create-webapi.sh;;
                 # Libraries & Frameworks
                 express)    bash ./.shell/sh/libs/install-express.sh;;
                 ng2)        bash ./.shell/sh/libs/install-ng2.sh;;
