@@ -41,19 +41,19 @@ Menu() {
                 
                 h|help) Docs;;
                 # CI & Deployments
-                b|build)    bash ./.shell/sh/_build.sh;;
-                c|clean)    bash ./.shell/sh/_clean.sh;;
-                d|deploy)   bash ./.shell/sh/_deploy.sh;;
+                b|build)    bash ./.shell/sh/tasks/_build.sh;;
+                c|clean)    bash ./.shell/sh/tasks/_clean.sh;;
+                d|deploy)   bash ./.shell/sh/tasks/_deploy.sh;;
                 # Project Templates
                 webapp)     bash ./.shell/sh/_create-webapp.sh;;
                 webapi)     bash ./.shell/sh/_create-webapi.sh;;
                 # Libraries & Frameworks
-                express)    bash ./.shell/sh/install-express.sh;;
-                ng2)        bash ./shell/sh/install-ng2.sh;;
-                react)      bash ./.shell/sh/install-react.sh;;
-                webpack)    bash ./.shell/sh/install-webpack.sh;;
-                leaflet)    bash ./.shell/sh/install-leaflet.sh;;
-                openlayers) bash ./.shell/sh/install-openlayers.sh;;
+                express)    bash ./.shell/sh/libs/install-express.sh;;
+                ng2)        bash ./.shell/sh/libs/install-ng2.sh;;
+                react)      bash ./.shell/sh/libs/install-react.sh;;
+                webpack)    bash ./.shell/sh/libs/install-webpack.sh;;
+                leaflet)    bash ./.shell/sh/libs/install-leaflet.sh;;
+                openlayers) bash ./.shell/sh/libs/install-openlayers.sh;;
 
                 --) shift;;  # no more options
                 *) 
