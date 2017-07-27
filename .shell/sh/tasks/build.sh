@@ -1,6 +1,7 @@
 # clean
 . ./.shell/sh/utils/colors.sh
 
+clear
 setColor red
 echo "[-] artifact, dist"
 resetColor

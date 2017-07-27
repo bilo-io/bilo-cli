@@ -1,10 +1,11 @@
 # create local prod artifact
 . ./.shell/sh/utils/colors.sh
 
+clear
 setColor green-l
 echo "[+] ~/Prod_Deployments"
 resetColor
-mkdir ~/Prod_Deployments
+mkdir ./env.prod
 
 setColor cyan-l
 echo "[.] copy artifact to ~/Prod_Deployments"
