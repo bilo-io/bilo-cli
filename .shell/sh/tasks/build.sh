@@ -1,5 +1,5 @@
 # clean
-. ./.shell/sh/_colors.sh
+. ./.shell/sh/utils/colors.sh
 
 setColor red
 echo "[-] artifact, dist"

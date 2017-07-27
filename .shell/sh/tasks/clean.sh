@@ -1,3 +1,6 @@
+#!/bin/bash
+. ./.shell/sh/utils/colors.sh
+
 setColor red
 echo '
 [-] node_modules \

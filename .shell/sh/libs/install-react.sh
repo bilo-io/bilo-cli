@@ -1,4 +1,4 @@
-. ./.shell/sh/_colors.sh
+. ./.shell/sh/utils/colors.sh
 setColor cyan-l
 echo ' => init-react ...'
 resetColor

@@ -1,5 +1,5 @@
 # create local prod artifact
-. ./.shell/sh/_colors.sh
+. ./.shell/sh/utils/colors.sh
 
 setColor green-l
 echo "[+] ~/Prod_Deployments"
