@@ -1,45 +1,43 @@
 #!/bin/bash
 . ./.shell/sh/utils/colors.sh
 
-UTIL_NAME='
+Docs() {
+    setColor cyan
+    echo "
 ______ ___________                  __________ 
 ___  /____(_)__  /_____       _________  /__(_)
 __  __ \_  /__  /_  __ \_______  ___/_  /__  / 
 _  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /  
-/_.___//_/  /_/  \____/       \___/ /_/  /_/                                                             
-'
-WELCOME_MESSAGE='
-Use this CLI to rapidly setup frontend and backend projects!
-------------------------------------------------------------'
-HELP_MENU='
-    possible console commands:
-        
-        a | app)            initializes webapp with NodeJS & SASS
+/_.___//_/  /_/  \____/       \___/ /_/  /_/   "
+
+resetColor
+echo "Use this CLI to rapidly setup frontend and backend projects!
+------------------------------------------------------------
+    possible console commands:"
+setColor orange
+echo "
         b | build)          builds src folder using webpack
         c | clean)          removes folders: node_modules, artifact & dist
-        d | deploy)         deploys production package locally
-
+        d | deploy)         deploys production package locally"
+setColor cyan
+echo "
+        webapp)             initializes webapp with NodeJS & SASS
+        webapi)             initializes webapi with NodeJS & express"
+setColor green
+echo "        
         express)            adds express to webapp
         react)              adds react to webapp
         webpack)            adds Webpack to webapp
-
-Enter command: '
-Docs() {
-    setColor cyan
-    echo "$UTIL_NAME"
-
-    setColor orange
-    echo "$WELCOME_MESSAGE"
-
-    setColor white
-    echo -ne "$HELP_MENU"
+"
+resetColor
+echo -ne "Enter command: "
 }
-Menu() {
+Action() {
         arg=$1
         echo "$arg"
         case "$arg" in
                 
-                h|help) Docs;;
+                h|help) ShowMenu;;
                 # CI & Deployments
                 b|build)    bash ./.shell/sh/tasks/_build.sh;;
                 c|clean)    bash ./.shell/sh/tasks/_clean.sh;;
@@ -65,15 +63,16 @@ Menu() {
         shift
 }
 
-Docs
-resetColor
+ShowMenu() {
+    Docs
+    resetColor
 
-if [ $# -gt 0 ]; then
-    Menu $1
-else
-    read userCommand
-    Menu $userCommand
-fi
-# while [ $# -gt 0 ]
-# do
-# done
+    if [ $# -gt 0 ]; then
+        Action $1
+    else
+        read userCommand
+        Action $userCommand
+    fi
+}
+
+ShowMenu $1
