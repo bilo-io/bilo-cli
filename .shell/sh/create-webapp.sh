@@ -1,17 +1,24 @@
 #!/bin/bash
-. ./.shell/sh/_colors.sh
+. ./.shell/sh/utils/colors.sh
 
-setColor "green"
-echo '==================================================='
-echo ' (init-webapp): creating webapp'
-echo '---------------------------------------------------'
+setColor cyan-l
+echo ' => creating webapp ...'
 resetColor
-echo ' + src/'
-echo '---------------------------------------------------'
 mkdir src
+setColor green
+echo '[+] src/'
+resetColor
 mkdir src/app
+setColor green
+echo '[+] src/app/'
+resetColor
 mkdir src/img
+setColor green
+echo '[+] src/img/'
+resetColor
 mkdir src/sass
+setColor green
+echo '[+] src/sass/'
 resetColor
 
 echo "
@@ -24,10 +31,8 @@ echo "
         <h1>Hello World!</h1>
     </body>
 </html>" > src/index.html
-setColor "green"
-echo '==================================================='
-echo ' (init-webapp): creating README.md'
-echo '---------------------------------------------------'
+setColor green
+echo ' [+] src/index.html'
 resetColor
 
 echo "# Project Readme
@@ -58,16 +63,18 @@ Rename this file to \"README.md\".
 > - Provide a list of features 
 > - Ideally with screenshots
 " > README_default.md
-
-setColor "green"
-echo '==================================================='
-echo ' (init-webapp):   creating node app'
-echo '---------------------------------------------------'
+setColor green
+echo ' [+] README_Default.md'
 resetColor
 
-# npm init
-setColor "green"
-echo '==================================================='
-echo ' (init-webapp):    done'
-echo '==================================================='
+setColor cyan-l
+echo '[.] creating Node app'
+resetColor
+
+npm init
+
+setColor cyan-l
+echo '
+ => init-app: done
+ '
 resetColor

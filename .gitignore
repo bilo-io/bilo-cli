@@ -7,4 +7,5 @@ src/
 README_default.md
 package.json
 .babelrc
+server.js
 webpack.config.js

@@ -1,5 +1,5 @@
 $selfPath = (Get-Item -Path "." -Verbose).FullName
-$dllRelativePath = "/.shell/ps/_colors.ps1"
+$dllRelativePath = "/.shell/ps/utils/colors.ps1"
 $dllAbsolutePath = Join-Path $selfPath $dllRelativePath
 . $dllAbsolutePath
 
