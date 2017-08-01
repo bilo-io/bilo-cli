@@ -27,7 +27,7 @@ var config = {
     },
     output: {
         path: DIST,
-        publicPath: 'http://localhost:8080/',
+        publicPath: '/',
         filename: 'app.js'
     },
     module: {
