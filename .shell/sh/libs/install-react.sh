@@ -3,9 +3,7 @@ setColor cyan-l
 echo ' => init-react ...'
 resetColor
 # React
-setColor green-l
-echo '[+] react, react-dom'
-resetColor
+colorEcho 'green-l' '[+] react, react-dom'
 
 npm install \
     react \

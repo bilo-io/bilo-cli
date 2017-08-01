@@ -79,7 +79,7 @@ function docsColors {
 }
 
 function colorEcho {
-    setColor $1
+    setColor "$1"
     echo "$2"
     resetColor
 }
