@@ -78,7 +78,7 @@ function docsColors {
     resetColor
 }
 
-function colorEcho {
+function echoColor {
     setColor "$1"
     echo "$2"
     resetColor

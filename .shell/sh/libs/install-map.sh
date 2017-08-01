@@ -26,24 +26,18 @@ MapScss() {
 }
 
 SetupLeaflet(){
-    setColor green-l
-    echo "[+] node_modules: leaflet"
-    resetColor
+    echoColor 'green-l' "[+] node_modules: leaflet"
     npm install leaflet --save-dev
     cp ./.shell/blueprints/map-leaflet.js > ./src/app/components/map/map.js
-    setColor green
-    echo "[+] src/components/map/map.js"
-    resetColor
+    echoColor 'green' "[+] src/components/map/map.js"
 }
 SetupOpenLayers(){
-    setColor green-l
-    echo "[+] node_modules: openlayers"
-    resetColor
+    
+    echoColor 'green-l' "[+] node_modules: openlayers"
     npm install openlayers --save-dev
+
     cp ./.shell/blueprints/map-openlayers.js > ./src/app/components/map/map.js
-    setColor green
-    echo "[+] src/components/map/map.js"
-    resetColor
+    echoColor 'green' "[+] src/components/map/map.js"
 }
 MapMenu() {
     echo -ne "
@@ -59,10 +53,7 @@ MapMenu() {
         o)  SetupOpenLayers;;
         l)  SetupLeaflet;;
         --) shift;;
-        *)  setColor orange
-            echo "the option '$mapType' does not exist
-            "
-            resetColor
+        *)  echoColor 'orange' "the option '$mapType' does not exist"
             MapMenu;;
     esac
     shift
@@ -75,9 +66,7 @@ ReactMap() {
 
 AngularMap() {
     MapScss
-    setColor green
-    echo "[+] src/components/map/map.js"
-    resetColor
+    echoColor 'green' "[+] src/components/map/map.js"
     cp ./.shell/blueprints/map-leaflet.ts > ./src/app/components/map/map.component.ts
 }
 
@@ -87,21 +76,16 @@ FrameworkMenu() {
     r)    React
     
 choose: "
-    resetColor
 
     read framework
     case "$framework" in
             a)  AngularMap;;
             r)  ReactMap;;
             --) shift;;
-            *)  setColor orange
-                echo "the option '$framework' does not exist
-                "
-                resetColor
+            *)  echo 'orange' "the option '$framework' does not exist"
                 FrameworkMenu;;
     esac
     shift
 }
 
-# FrameworkMenu
 MapMenu

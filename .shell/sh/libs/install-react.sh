@@ -1,26 +1,22 @@
+#!/bin/bash
 . ./.shell/sh/utils/colors.sh
-setColor cyan-l
-echo ' => init-react ...'
-resetColor
-# React
-colorEcho 'green-l' '[+] react, react-dom'
 
+echoColor 'cyan-l' ' => init-react ...'
+
+# React
+echoColor 'green-l' '[+] react, react-dom'
 npm install \
     react \
     react-dom \
 --save-dev
 # React Router
-# setColor green-l
-# '[+] react, react-dom'
+# echoColor 'green-l' '[+] react, react-dom'
 # npm install \
 #     react-router \
 #     react-router-dom \
 # --save
 # Babel
-setColor green-l
-echo '[+] babel: es2015, react'
-resetColor
-
+echoColor 'green-l' '[+] babel: es2015, react'
 npm install \
     babel-core \
     babel-loader \
@@ -30,9 +26,7 @@ npm install \
 
 # Add files
 # - INDEX.JS
-setColor green
-echo '[+] src/index.js'
-resetColor
+echoColor 'green' '[+] src/index.js'
 echo "
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -47,9 +41,7 @@ ReactDOM.render(
 " > src/index.js
 
 # - APP.JS
-setColor green
-echo '[+] src/app/app.js'
-resetColor
+echoColor 'green' '[+] src/app/app.js'
 echo "
 import React from 'react';
 
@@ -64,8 +56,6 @@ export default class App extends React.Component {
 }
 " > src/app/app.js
 
-setColor cyan-l 
-echo '
+echoColor 'cyan-l' '
  => init-react: DONE
  '
-resetColor

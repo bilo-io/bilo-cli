@@ -1,19 +1,19 @@
 #!/bin/bash
 . ./.shell/sh/utils/colors.sh
 
-colorEcho 'cyan-l' ' => creating webapp ...'
+echoColor 'cyan-l' ' => creating webapp ...'
 
 mkdir src
-colorEcho 'green' '[+] src/'
+echoColor 'green' '[+] src/'
 
 mkdir src/app
-colorEcho 'green' '[+] src/app/'
+echoColor 'green' '[+] src/app/'
 
 mkdir src/img
-colorEcho 'green' '[+] src/img/'
+echoColor 'green' '[+] src/img/'
 
 mkdir src/sass
-colorEcho 'green' '[+] src/sass/'
+echoColor 'green' '[+] src/sass/'
 
 echo "
 <!DOCTYPE html>
@@ -25,7 +25,7 @@ echo "
         <h1>Hello World!</h1>
     </body>
 </html>" > src/index.html
-colorEcho 'green' '[+] src/index.html'
+echoColor 'green' '[+] src/index.html'
 
 
 echo "# Project Readme
@@ -56,11 +56,11 @@ Rename this file to \"README.md\".
 > - Provide a list of features 
 > - Ideally with screenshots
 " > README_default.md
-colorEcho 'green' '[+] README_Default.md'
+echoColor 'green' '[+] README_Default.md'
 
-colorEcho 'cyan-l' '[.] creating Node app'
+echoColor 'cyan-l' '[.] creating Node app'
 npm init
 
-colorEcho 'cyan-l' '
+echoColor 'cyan-l' '
  => init-app: done
  '

@@ -1,23 +1,18 @@
 . ./.shell/sh/utils/colors.sh
 
-setColor cyan-l
-echo ' => init-webpack ...'
-resetColor
+echoColor 'cyan-l' ' => init-webpack ...'
 npm install \
     webpack \
-    # webpack-dev-server \
-    # css-loader \
-    # style-loader \
-    # sass-loader \
-    # file-loader \
-    # html-webpack-plugin \
-    # node-sass \
+    webpack-dev-server \
+    css-loader \
+    style-loader \
+    sass-loader \
+    file-loader \
+    html-webpack-plugin \
+    node-sass \
 --save-dev 
 
-setColor green
-echo '[+] webpack.config.js'
-resetColor
-
+echoColor 'green' '[+] webpack.config.js'
 echo "
 var path = require('path');
 var webpack = require('webpack');
@@ -62,12 +57,11 @@ var config = {
     }
 }
 " > webpack.config.js
-setColor cyan-l
-echo ' => init-webpack: done'
-resetColor
+echoColor 'cyan-l' '
+ => init-webpack: done
+ '
 
-setColor orange
-echo ' 
+echoColor 'orange' ' 
 NOTE: 
 
 add the following to the "scripts" node in package.json: 
@@ -80,4 +74,3 @@ scripts: {
     // ...
 }
 '
-resetColor

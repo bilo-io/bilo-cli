@@ -2,16 +2,16 @@
 . ./.shell/sh/utils/colors.sh
 
 
-colorEcho 'green' ' => creating webapi ...'
+echoColor 'green' ' => creating webapi ...'
 
 mkdir src
-colorEcho 'green' '[+] src/'
+echoColor 'green' '[+] src/'
 
 mkdir src/app
-colorEcho 'green' '[+] src/app/'
+echoColor 'green' '[+] src/app/'
 
 mkdir src/routes
-colorEcho 'green' '[+] src/routes'
+echoColor 'green' '[+] src/routes'
 
 echo "
 const express        = require('express');
@@ -27,14 +27,14 @@ app.listen(port, () => {
   console.log(' ... node server listening on port: ' + port);
 });
 " > server.js
-colorEcho 'green' '[+] server.js'
+echoColor 'green' '[+] server.js'
 
 npm init
-colorEcho 'green-l' '[+] express'
+echoColor 'green-l' '[+] express'
 npm install express --save
 
-colorEcho 'green-l' '[+] body-parser'
+echoColor 'green-l' '[+] body-parser'
 npm install body-parser --save
 
-colorEcho 'green-l' '[+] nodemon'
+echoColor 'green-l' '[+] nodemon'
 npm install nodemon --save
