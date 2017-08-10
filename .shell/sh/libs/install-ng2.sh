@@ -1,5 +1,5 @@
 #!/bin/bash
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 echoColor 'cyan-l' ' => init-ng2 ...'
 echo 'TODO: implement init-ng2'

@@ -1,5 +1,5 @@
 # clean
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 clear
 setColor red

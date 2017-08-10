@@ -1,4 +1,4 @@
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 echoColor 'cyan-l' ' => init-webpack ...'
 npm install \

@@ -17,40 +17,31 @@ _  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /
 setColor cyan
 echo "$UTIL_NAME"
 
-setColor cyan-l
-echo "[.] creating command line utility: '$name'"
+echoColor 'cyan-l' "[.] creating command line utility: '$name'"
 cp ./.shell/bilo-cli.sh ./.shell/$name
 chmod +x ./.shell/$name
-cp ./.shell/$name /usr/local/bin
-rm -rf "./.shell/$name"
+mv ./.shell/$name /usr/local/bin/
 
-setColor orange
-echo "[!] installing '$name' CLI requires authorisation:"
+echoColor 'orange' "[!] installing '$name' CLI requires authorisation:"
 
-setColor red-l
-echo "[-] del /usr/local/bin/.shell (old)"
-resetColor
+echoColor 'red-l' "[-] del /usr/local/bin/.shell (old)"
 sudo rm -rf /usr/local/bin/.shell 
 
-setColor green-l
-echo "[+] add /usr/local/bin/.shell (update)"
-resetColor
+echoColor 'green-l' "[+] add /usr/local/bin/.shell (update)"
 sudo mkdir /usr/local/bin/.shell
 
-setColor blue-l
-echo "[.] copy scripts to /usr/local/bin/.shell"
-resetColor
+
+echoColor 'blue-l' "[.] copy scripts to /usr/local/bin/.shell"
 sudo cp -r ./.shell/sh /usr/local/bin/.shell/
+#/Users/bilolwabona/Desktop/
+#/usr/local/bin/.shell/
 
 cwd=$(pwd)
 
-setColor cyan -l
-echo "
+echoColor 'cyan-l' "
  => '$name' CLI installed successfully
 
  ... run:"
-setColor white
-echo "
+echoColor 'white' "
 $USER$ $name 
 "
-resetColor
