@@ -1,5 +1,5 @@
 # create local prod artifact
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 clear
 setColor green-l

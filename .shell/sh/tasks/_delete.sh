@@ -1,8 +1,8 @@
 #!/bin/bash
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 DeleteAllFiles() {
-    bash ./.shell/sh/tasks/clean.sh
+    bash /usr/local/bin/.shell/sh/tasks/clean.sh
     setColor red
     echo -ne '[-] src/
 [-] .babelrc 

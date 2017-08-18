@@ -1,5 +1,5 @@
 #!/bin/bash
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 MapScss() {
     mkdir ./src/app/components
