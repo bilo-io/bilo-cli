@@ -13,20 +13,7 @@ echoColor 'green' '[+] src/app/'
 mkdir src/routes
 echoColor 'green' '[+] src/routes'
 
-echo "
-const express        = require('express');
-const MongoClient    = require('mongodb').MongoClient;
-const bodyParser     = require('body-parser');
-const app            = express();
-const port = process.env.port || 8000;
-
-app.use(bodyParser.urlencoded());
-app.use(bodyParser.json());
-require('./src/routes')(app, {})
-app.listen(port, () => {
-  console.log(' ... node server listening on port: ' + port);
-});
-" > server.js
+cat ./.shell/blueprints/server.webapi.js > server.js
 echoColor 'green' '[+] server.js'
 
 npm init

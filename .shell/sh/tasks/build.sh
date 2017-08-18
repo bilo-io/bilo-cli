@@ -2,26 +2,18 @@
 . ./.shell/sh/utils/colors.sh
 
 clear
-setColor red
-echo "[-] artifact, dist"
-resetColor
+echoColor "red" "[-] artifact, dist"
 rm -rf artifact dist
-
-setColor cyan 
-echo "[.] building bundle ... (dist)"
-resetColor
+ 
+echoColor "cyan" "[.] building bundle ... (dist)"
 npm run build
 
-setColor green
-echo "[+] artifact/"
-resetColor
+echoColor "green" "[+] artifact/"
 mkdir artifact
 mv dist ./artifact
 cp server.js ./artifact
 cp package.json ./artifact
 cd ./artifact
 
-setColor blue-l
-echo "[.] installing prod packages"
-resetColor
+echoColor "blue-l" "[.] installing prod packages"
 npm install --production

@@ -8,8 +8,9 @@ MapScss() {
     echo "[+] src/app/components/map/map.scss"
     resetColor
 
-    echo "@import '~leaflet/dist/leaflet.css';
+    echo "@import '~leaflet/dist/leaflet.css';" > ./src/app/components/map/map.scss
 
+echo "
 .map-container {
     position: relative;
     background: grey;
@@ -22,21 +23,22 @@ MapScss() {
     background: rgba(#00adee, 0.1);
     width: 100%;
     height: 100%;
-}" > ./src/app/components/map/map.scss
+}" >> ./src/app/components/map/map.scss
 }
 
 SetupLeaflet(){
     echoColor 'green-l' "[+] node_modules: leaflet"
     npm install leaflet --save-dev
-    cp ./.shell/blueprints/map-leaflet.js > ./src/app/components/map/map.js
+    mkdir ./src/app/components/map
+    cp ./.shell/blueprints/map.leaflet.js > ./src/app/components/map/map.js
     echoColor 'green' "[+] src/components/map/map.js"
 }
 SetupOpenLayers(){
     
     echoColor 'green-l' "[+] node_modules: openlayers"
     npm install openlayers --save-dev
-
-    cp ./.shell/blueprints/map-openlayers.js > ./src/app/components/map/map.js
+    mkdir ./src/app/components/map
+    cp ./.shell/blueprints/map.openlayers.js > ./src/app/components/map/map.js
     echoColor 'green' "[+] src/components/map/map.js"
 }
 MapMenu() {
@@ -50,8 +52,8 @@ MapMenu() {
 
     read mapType
     case "$mapType" in
-        o)  SetupOpenLayers;;
-        l)  SetupLeaflet;;
+        o|openlayers)   SetupOpenLayers;;
+        l|leaflet)      SetupLeaflet;;
         --) shift;;
         *)  echoColor 'orange' "the option '$mapType' does not exist"
             MapMenu;;

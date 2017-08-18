@@ -1,4 +1,5 @@
 #!/bin/bash
+. ./.shell/sh/utils/colors.sh
 
 echoColor 'cyan-l' ' => init-express ...'
 npm install \
@@ -8,12 +9,6 @@ npm install \
 
 echoColor 'green' ' [+] server.js'
 
-echo "var express = require('express');
-var server = express();
-var port = process.env.port || 8080;
-
-server.use(express.static(__dirname + '/dist/'));
-server.listen(port, '0.0.0.0');
-console.log('...listening on port: ' + port);" > server.js
+cat ./.shell/blueprints/server.webapp.js > server.js
 
 echoColor 'cyan-l' ' => init-express: done'
