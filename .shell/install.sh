@@ -1,5 +1,5 @@
 #!/bin/bash
-. ./.shell/sh/utils/colors.sh
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
 name=$1
 [[ -z "${name// }" ]] && name="bilo"
