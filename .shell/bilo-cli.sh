@@ -31,6 +31,7 @@ echo -ne "enter command: "
 }
 Action() {
         arg=$1
+        action=$2
         case "$arg" in
                 
                 h|help) Start;;
@@ -42,12 +43,9 @@ Action() {
                 # Project Templates
                 wa|wapp|webapp)     bash /usr/local/bin/.shell/sh/create-webapp.sh;;
                 ws|wapi|webapi)     bash /usr/local/bin/.shell/sh/create-webapi.sh;;
-                # Libraries & Frameworks
-                map)    bash /usr/local/bin/.shell/sh/libs/install-map.sh;;
+                # Frameworks
                 ng2)        bash /usr/local/bin/.shell/sh/libs/install-ng2.sh;;
-                react)      bash /usr/local/bin/.shell/sh/libs/install-react.sh;;
-                express)    bash /usr/local/bin/.shell/sh/libs/install-express.sh;;
-                webpack)    bash /usr/local/bin/.shell/sh/libs/install-webpack.sh;;
+                react)      bash /usr/local/bin/.shell/sh/menus/react-menu.sh "$action";;
 
                 --) shift;;  # no more options
                 *) 
@@ -61,7 +59,7 @@ Action() {
 
 Start() {
     if [ $# -gt 0 ]; then
-        Action $1
+        Action $1 $2
     else
         Docs
         resetColor
@@ -70,4 +68,4 @@ Start() {
     fi
 }
 
-Start $1
+Start $1 $2

@@ -41,7 +41,7 @@ cwd=$(pwd)
 echoColor 'cyan-l' "
  => '$name' CLI installed successfully
  => from your terminal, run the command:
-"
+
 
  ... run:"
 echoColor 'white' "
