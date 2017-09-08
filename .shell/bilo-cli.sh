@@ -22,10 +22,8 @@ echoColor 'cyan' "
     webapp)             initializes webapp with NodeJS & SASS
     webapi)             initializes webapi with NodeJS & express"
 echoColor 'green' "        
-    map)                adds leaflet | openlayers to webapp
     react)              adds react to webapp
-    express)            adds express to webapp
-    webpack)            adds Webpack to webapp
+    ng2)            adds Webpack to webapp
 "
 echo -ne "enter command: "
 }

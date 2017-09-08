@@ -55,6 +55,13 @@ export default class App extends React.Component {
     }
 }
 " > src/app/app.js
+mkdir src/app/components
+mkdir src/app/containers
+mkdir src/app/page
+echoColor 'green' "
+[+] src/app/components
+[+] src/app/containers
+[+] src/app/pages"
 
 echoColor 'cyan-l' '
  => init-react: DONE
