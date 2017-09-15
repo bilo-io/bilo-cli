@@ -13,7 +13,7 @@ npm install \
 --save-dev
 
 path="./src/app/"
-blueprints_react="/usr/local/bin/./.shell/blueprints/react"
+blueprints_react="/usr/local/bin/.shell/blueprints/react"
 
 echoColor 'green-l' "[+] $path"
 

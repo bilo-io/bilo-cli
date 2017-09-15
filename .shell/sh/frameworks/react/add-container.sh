@@ -3,7 +3,7 @@
 echo "adding React container... name?"
 read name
 path="./src/app/containers/$name"
-blueprints_react="/usr/local/bin/./.shell/blueprints/react"
+blueprints_react="/usr/local/bin/.shell/blueprints/react"
 echo "PATH: $path"
 mkdir $path
 

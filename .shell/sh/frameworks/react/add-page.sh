@@ -2,7 +2,7 @@
 . /usr/local/bin/.shell/sh/utils/colors.sh
 echo "adding React page... name?"
 read name
-blueprints_react="/usr/local/bin/./.shell/blueprints/react"
+blueprints_react="/usr/local/bin/.shell/blueprints/react"
 path="./src/app/pages/$name"
 mkdir $path
 echoColor 'green-l' "[+] $path"
