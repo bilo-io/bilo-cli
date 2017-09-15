@@ -1,12 +1,11 @@
-import { SOME_ACTION } from './actions'
-import { someAction } from './actions'
+import { MY_ACTION } from './actions'
 
 const homeReducer = (state = initialState, {
     type,
     ...action
 }) => {
     switch (type) {
-        case UPDATE_QUERY:
+        case MY_ACTION:
             return {
                 ...state,
                 data: action.data

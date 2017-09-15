@@ -1,11 +1,9 @@
 // ActionTypes
-// ***********
-const SOME_ACTION = 'SOME_ACTION'
-// Actions
-// *******
-export const someAction = (data) => {
+const MY_ACTION = 'MY_ACTION';
+// ActionCreators
+export const myAction = (data) => {
     return {
-        type: UPDATE_QUERY,
+        type: MY_ACTION,
         data
     }
 }
