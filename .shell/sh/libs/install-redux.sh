@@ -17,8 +17,8 @@ blueprints_react="/usr/local/bin/.shell/blueprints/react"
 
 echoColor 'green-l' "[+] $path"
 
-echo $blueprints_react/redux-root-reducer.js >> $path/root-reducer.js
+cat $blueprints_react/redux-root-reducer.js >> $path/root-reducer.js
 echoColor 'green' "[+] - root-reducer.js"
 
-echo $blueprints_react/store.js >> $path/store.js
+cat $blueprints_react/store.js >> $path/store.js
 echoColor 'green' "[+] - store.js"

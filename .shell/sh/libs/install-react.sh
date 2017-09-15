@@ -25,11 +25,11 @@ npm install \
 # Add files
 # - INDEX.JS
 echoColor 'green' '[+] src/index.js'
-echo /usr/local/bin/.shell/blueprints/react/index.js > src/index.js
+cat /usr/local/bin/.shell/blueprints/react/index.js > src/index.js
 
 # - APP.JS
 echoColor 'green' '[+] src/app/app.js'
-echo /usr/local/bin/.shell/blueprints/react/app.js > src/app/app.js
+cat /usr/local/bin/.shell/blueprints/react/app.js > src/app/app.js
 
 mkdir src/app/components
 mkdir src/app/containers
