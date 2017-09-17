@@ -30,8 +30,8 @@ sudo rm -rf /usr/local/bin/.shell
 echoColor 'green-l' "[+] add /usr/local/bin/.shell (update)"
 sudo mkdir /usr/local/bin/.shell
 
-
 echoColor 'blue-l' "[.] copy scripts to /usr/local/bin/.shell"
+sudo cp -r ./.shell/blueprints /usr/local/bin/.shell/
 sudo cp -r ./.shell/sh /usr/local/bin/.shell/
 #/Users/bilolwabona/Desktop/
 #/usr/local/bin/.shell/
@@ -41,7 +41,7 @@ cwd=$(pwd)
 echoColor 'cyan-l' "
  => '$name' CLI installed successfully
  => from your terminal, run the command:
-"
+
 
  ... run:"
 echoColor 'white' "
