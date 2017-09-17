@@ -1,6 +1,10 @@
 import { MY_ACTION } from './actions'
 
-const homeReducer = (state = initialState, {
+const initialState = {
+    data: undefined
+}
+
+const myComponentReducer = (state = initialState, {
     type,
     ...action
 }) => {
@@ -13,3 +17,5 @@ const homeReducer = (state = initialState, {
         default: return state;
     }
 }
+
+export default myComponentReducer;
