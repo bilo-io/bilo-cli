@@ -21,7 +21,6 @@ echoColor 'cyan-l' "
 }
 Action() {
         arg=$1
-        echo "Action: $arg"
         case "$arg" in
                 # react scripts
                 init)       bash /usr/local/bin/.shell/sh/frameworks/react/_init.sh ;;

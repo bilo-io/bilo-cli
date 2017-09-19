@@ -1,5 +1,5 @@
 // ActionTypes
-const MY_ACTION = 'MY_ACTION';
+export const MY_ACTION = 'MY_ACTION';
 // ActionCreators
 export const myAction = (data) => {
     return {
