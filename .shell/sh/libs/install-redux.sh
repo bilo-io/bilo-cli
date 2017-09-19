@@ -20,5 +20,5 @@ echoColor 'green-l' "[+] $path"
 cat $blueprints_react/redux-root-reducer.js >> $path/root-reducer.js
 echoColor 'green' "[+] - root-reducer.js"
 
-cat $blueprints_react/store.js >> $path/store.js
+cat $blueprints_react/redux-store.js >> $path/store.js
 echoColor 'green' "[+] - store.js"

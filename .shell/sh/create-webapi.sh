@@ -1,6 +1,7 @@
 #!/bin/bash
 . /usr/local/bin/.shell/sh/utils/colors.sh
 
+blueprints="/usr/local/bin/.shell/blueprints"
 
 echoColor 'green' ' => creating webapi ...'
 
@@ -13,7 +14,7 @@ echoColor 'green' '[+] src/app/'
 mkdir src/routes
 echoColor 'green' '[+] src/routes'
 
-cat ./.shell/blueprints/server.webapi.js > server.js
+cat $blueprints/server.webapi.js > server.js
 echoColor 'green' '[+] server.js'
 
 npm init

@@ -1,7 +1,8 @@
 #!/bin/bash
 . /usr/local/bin/.shell/sh/utils/colors.sh
 
-cat ./.shell/blueprints/webpack.config.js > webpack.config.js
+blueprints="/usr/local/bin/.shell/blueprints"
+cat $blueprints/webpack.config.js > webpack.config.js
 echoColor 'green' '[+] webpack.config.js'
 echoColor 'cyan-l' ' => init-webpack ...'
 npm install \
