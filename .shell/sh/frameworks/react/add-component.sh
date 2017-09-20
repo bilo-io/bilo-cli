@@ -10,5 +10,9 @@ path="./src/app/components/$name"
 mkdir $path
 echoColor 'green-l' "[+] $path"
 
-cat /usr/local/bin/.shell/blueprints/react/component.js >> $path/index.js
-sed "s/MyComponent/$name/g" $path/index.js
+cat $blueprints_react/component.js >> $path/index.js
+# sed "s/MyComponent/$name/g" $path/index.js
+echoColor 'green' "[+] - component.js"
+
+cat $blueprints_react/style.scss >> $path/style.scss
+echoColor 'green' "[+] - style.scss"
