@@ -1,6 +1,8 @@
 #!/bin/bash
 . /usr/local/bin/.shell/sh/utils/colors.sh
 
+cliVersion="0.0.1"
+
 Docs() {
     clear
     echoColor 'cyan' "
@@ -13,7 +15,15 @@ _  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /
 Use this CLI to rapidly setup frontend and backend projects!
 ------------------------------------------------------------
     
-cli commands:"
+cli misc:"
+echoColor 'yellow' "
+    -d|--delete)         delete bilo-cli
+    -h|--help)           shows help menu
+    -i|--install)        installs cli from (src: ~/Dev/Midnite/bilo-cli/)
+    -u|--update)         update cli: get latest source and install
+    -v|--version)        show version of bilo-cli
+"
+echo "cli commands:"
 echoColor 'purple' "
     b | build)          builds src folder using webpack
     c | clean)          removes: node_modules, artifact & dist
@@ -22,8 +32,8 @@ echoColor 'cyan' "
     webapp)             initializes webapp with NodeJS & SASS
     webapi)             initializes webapi with NodeJS & express"
 echoColor 'green' "        
-    react)              adds react to webapp
-    ng2)            adds Webpack to webapp
+    elastic)            elasticsearch cli utility ( bulk import, start server, etc.)
+    react)              react.js cli utility (init app, add files, etc.)
 "
 echo -ne "enter command: "
 }
@@ -31,8 +41,12 @@ Action() {
         arg=$1
         action=$2
         case "$arg" in
-                
-                h|help) Start;;
+                -h|--help)     Start;;
+                -d|--delete)    bash ~/Dev/Midnite/bilo-cli/.shell/delete-cli.sh;;
+                -i|--install)    bash ~/Dev/Midnite/bilo-cli/.shell/install-cli.sh;;
+                -u|--update)    bash ~/Dev/Midnite/bilo-cli/.shell/update-cli.sh;;
+                -v|--version)  echoColor 'cyan-l' " => bilo-cli: $cliVersion";;
+
                 # CI & Deployments
                 b|build)    bash /usr/local/bin/.shell/sh/tasks/build.sh;;
                 c|clean)    bash /usr/local/bin/.shell/sh/tasks/clean.sh;;
@@ -44,6 +58,7 @@ Action() {
                 # Frameworks
                 ng2)        bash /usr/local/bin/.shell/sh/libs/install-ng2.sh;;
                 react)      bash /usr/local/bin/.shell/sh/menus/react-menu.sh "$action";;
+                elastic)    bash /usr/local/bin/.shell/sh/menus/elastic-menu.sh "$action";;
 
                 --) shift;;  # no more options
                 *) 

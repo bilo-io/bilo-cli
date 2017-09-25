@@ -83,3 +83,5 @@ function echoColor {
     echo "$2"
     resetColor
 }
+
+command=$1
