@@ -11,19 +11,45 @@ echo "commands: "
 echoColor 'cyan-l' "
     index)         creates react app with Redux, Webpack, Express & SASS
     bulk)          bulk api: specify relative path to file containing bulk json instructions
-    server)        starts elasticsearch server in path: ~/Dev/elasticsearch5.6.0/bin/elasticsearch
+    server)        starts elasticsearch server in path: ~/Dev/es/elasticsearch-{version}/bin/elasticsearch
 "
 }
 Action() {
         arg=$1
         case "$arg" in
                 # react scripts
-                bulk)       bash /usr/local/bin/.shell/sh/frameworks/react/_init.sh ;;
+                bulk)       
+                    esUrl="http://localhost:9200"
+                    currentDir=$(pwd)
+                    echoColor 'cyan-l' "elastic bulk insert starting:"
+                    
+                    echoColorNE 'yellow' "es_index: "
+                    read esIndex
+                    echoColorNE 'yellow' "rel path: "
+                    read jsonFilePath
+
+                    echoColor 'green-l' " - url:    $esUrl/$esIndex/_bulk \n - file:   $currentDir$jsonFilePath
+                    "
+
+                    echoColor 'green' " generating mapping: "
+
+                    mappingFile=$(cat $jsonFilePath.mapping.json)
+                    echoColor 'purple' "Mapping: $mappingFile"
+                    curl -XPUT $esUrl/$esIndex -d $mappingFile
+
+                    # curl -XPOST localhost:9200/$esIndex/_bulk --data-binary @$jsonFilePath.json \
+                        # -H "Content-Type: application/x-ndjson"
+                    # echo $mappingFile
+                    echoColor 'cyan-l' " => elastic bulk import: DONE "
+                    ;;
                 server)     
                     echoColor 'cyan-l' "starting elasticsearch server"; 
-                    echoColor 'yellow' "Version? "
+                    cd ~/Dev/es/
+                    ls -l 
+                    echoColorNE 'yellow' "which version? (see listed versions above, e.g.: 5.6.0 )"
+                    echoColo "version: elasticsearch-"
                     read esVersion
-                    ls -l "~/Dev/es/elasticsearch-$esVersion/" 
+                    cd ./elasticsearch-$esVersion/
                     pwd; 
                     ./bin/elasticsearch;;
                 # default handlers

@@ -84,4 +84,10 @@ function echoColor {
     resetColor
 }
 
+function echoColorNE {
+    setColor "$1"
+    echo -ne "$2"
+    resetColor
+}
+
 command=$1

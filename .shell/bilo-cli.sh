@@ -45,7 +45,7 @@ Action() {
                 -d|--delete)    bash ~/Dev/Midnite/bilo-cli/.shell/delete-cli.sh;;
                 -i|--install)    bash ~/Dev/Midnite/bilo-cli/.shell/install-cli.sh;;
                 -u|--update)    bash ~/Dev/Midnite/bilo-cli/.shell/update-cli.sh;;
-                -v|--version)  echoColor 'cyan-l' " => bilo-cli: $cliVersion";;
+                -v|--version)  echoColor 'cyan-l' "v$cliVersion";;
 
                 # CI & Deployments
                 b|build)    bash /usr/local/bin/.shell/sh/tasks/build.sh;;
