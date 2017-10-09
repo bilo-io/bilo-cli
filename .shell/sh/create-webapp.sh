@@ -23,6 +23,12 @@ echoColor 'green' '[+] src/index.html'
 cat $blueprints/README.md > README_default.md
 echoColor 'green' '[+] README_Default.md'
 
+cat $blueprints/.gitignore > .gitignore
+echoColor 'green' '[+] .gitignore'
+
+cat $blueprints/preview.html > preview.html
+echoColor 'green' '[+] .preview.html'
+
 echoColor 'cyan-l' '[.] creating Node app'
 npm init
 

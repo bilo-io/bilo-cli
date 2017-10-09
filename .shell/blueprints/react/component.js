@@ -1,6 +1,6 @@
 import React from 'react';
-
-class MyComponent extends React.Component {
+import './style.scss';
+export default class MyComponent extends React.Component {
     constructor(props) {
         super(props)
     }
@@ -13,12 +13,12 @@ class MyComponent extends React.Component {
     }
 }
 
-// const MyComponent = (props) => {
+// export const MyComponent = (props) => {
 //     return (
 //         <div>
 //             <h1>MyComponent</h1>
 //         </div>
 //     )
 // }
-
-export default MyComponent;
+//
+// export default MyComponent;
