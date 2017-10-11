@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import './style.scss';
-export default class MyComponent extends React.Component {
+
+export default class MyComponent extends Component {
+    static propTypes = {
+        isActive: PropTypes.bool,
+        hello: PropTypes.func.isRequired,
+        index: PropTypes.number.isRequired,
+        name: PropTypes.string.isRequired
+    }
     constructor(props) {
         super(props)
     }
