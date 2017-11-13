@@ -34,6 +34,7 @@ echoColor 'cyan' "
     webapi)             initializes webapi with NodeJS & express"
 echoColor 'green' "        
     elastic)            elasticsearch cli utility ( bulk import, start server, etc.)
+    nginx)              shows nginx help
     react)              react.js cli utility (init app, add files, etc.)
 "
 echo -ne "enter command: "
@@ -59,6 +60,7 @@ Action() {
                 ws|wapi|webapi)     bash /usr/local/bin/.shell/sh/create-webapi.sh;;
                 # Frameworks
                 ng2)        bash /usr/local/bin/.shell/sh/libs/install-ng2.sh;;
+                nginx)      bash /usr/local/bin/.shell/sh/menus/nginx-menu.sh;;
                 react)      bash /usr/local/bin/.shell/sh/menus/react-menu.sh "$action";;
                 elastic)    bash /usr/local/bin/.shell/sh/menus/elastic-menu.sh "$action";;
 

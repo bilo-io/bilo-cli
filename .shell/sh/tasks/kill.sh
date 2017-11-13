@@ -1,6 +1,8 @@
 #!/bin/bash
+. /usr/local/bin/.shell/sh/utils/colors.sh
 
-port=0000
+port="UnspecifiedPort"
+
 if [ $# -gt 0 ]; then
   port=$1
 else
@@ -11,15 +13,15 @@ fi
 # echo "\nnetstat -vanp tcp | grep $port\n"
 # netstat -vanp tcp | grep $port
 
-echo "
-sudo lsof -i :$port
+echoColor 'cyan' "
+$ sudo lsof -i :$port
 "
 sudo lsof -i :$port
 
-echo -ne "\n -> PID to kill: "
+echo -ne "-> enter PID to kill: "
 read PID
 
-echo "
-kill -9 $PID
+echoColor 'red' "
+$ kill -9 $PID
 "
-kill -9 $PID
+sudo kill -9 $PID
