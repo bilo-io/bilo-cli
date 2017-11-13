@@ -1,3 +1,4 @@
+#!/bin/bash
 # clean
 . /usr/local/bin/.shell/sh/utils/colors.sh
 

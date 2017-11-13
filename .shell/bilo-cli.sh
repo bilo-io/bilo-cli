@@ -22,6 +22,7 @@ echoColor 'yellow' "
     -i|--install)        installs cli from (src: ~/Dev/Midnite/bilo-cli/)
     -u|--update)         update cli: get latest source and install
     -v|--version)        show version of bilo-cli
+    -k|--kill)           kill process running on specified port
 "
 echo "cli commands:"
 echoColor 'purple' "
@@ -42,10 +43,11 @@ Action() {
         action=$2
         case "$arg" in
                 -h|--help)     Start;;
-                -d|--delete)    bash ~/Dev/Midnite/bilo-cli/.shell/delete-cli.sh;;
-                -i|--install)    bash ~/Dev/Midnite/bilo-cli/.shell/install-cli.sh;;
-                -u|--update)    bash ~/Dev/Midnite/bilo-cli/.shell/update-cli.sh;;
+                -d|--delete)    bash ~/Midnite/bilo-cli/.shell/delete-cli.sh;;
+                -i|--install)    bash ~/Midnite/bilo-cli/.shell/install-cli.sh;;
+                -u|--update)    bash ~/Midnite/bilo-cli/.shell/update-cli.sh;;
                 -v|--version)  echoColor 'cyan-l' "v$cliVersion";;
+                -k|--kill)      bash /usr/local/bin/.shell/sh/tasks/kill.sh "$action";;
 
                 # CI & Deployments
                 b|build)    bash /usr/local/bin/.shell/sh/tasks/build.sh;;

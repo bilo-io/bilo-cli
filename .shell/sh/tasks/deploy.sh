@@ -1,3 +1,4 @@
+#!/bin/bash
 # create local prod artifact
 . /usr/local/bin/.shell/sh/utils/colors.sh
 
