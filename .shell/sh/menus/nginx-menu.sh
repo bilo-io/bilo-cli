@@ -15,3 +15,13 @@ echoColor 'green' "
 
 docs: https://www.nginx.com/resources/admin-guide/processes-and-runtime-control/
 "
+
+
+echoColor 'cyan-l' "
+nginx installation
+"
+nginx -v
+echoColor 'cyan-l' "
+nginx config (/usr/local/etc/nginx/nginx.conf)
+"
+cat /usr/local/etc/nginx/nginx.conf
