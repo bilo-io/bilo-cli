@@ -22,6 +22,7 @@ echoColor 'yellow' "
     -i|--install)        installs cli from (src: ~/Midnite/bilo-cli/)
     -u|--update)         update cli: get latest source and install
     -v|--version)        show version of bilo-cli
+    -k|--kill)           kill process running on specified port
 "
 echo "cli commands:"
 echoColor 'purple' "
@@ -33,6 +34,7 @@ echoColor 'cyan' "
     webapi)             initializes webapi with NodeJS & express"
 echoColor 'green' "        
     elastic)            elasticsearch cli utility ( bulk import, start server, etc.)
+    nginx)              shows nginx help
     react)              react.js cli utility (init app, add files, etc.)
 "
 echo -ne "enter command: "
@@ -42,10 +44,12 @@ Action() {
         action=$2
         case "$arg" in
                 -h|--help)     Start;;
-                -d|--delete)    bash ~/Dev/Midnite/bilo-cli/.shell/delete-cli.sh;;
+
+                -d|--delete)    bash ~/Midnite/bilo-cli/.shell/delete-cli.sh;;
                 -i|--install)    bash ~/Midnite/bilo-cli/.shell/install-cli.sh;;
-                -u|--update)    bash ~/Dev/Midnite/bilo-cli/.shell/update-cli.sh;;
+                -u|--update)    bash ~/Midnite/bilo-cli/.shell/update-cli.sh;;
                 -v|--version)  echoColor 'cyan-l' "v$cliVersion";;
+                -k|--kill)      bash /usr/local/bin/.shell/sh/tasks/kill.sh "$action";;
 
                 # CI & Deployments
                 b|build)    bash /usr/local/bin/.shell/sh/tasks/build.sh;;
@@ -57,6 +61,7 @@ Action() {
                 ws|wapi|webapi)     bash /usr/local/bin/.shell/sh/create-webapi.sh;;
                 # Frameworks
                 ng2)        bash /usr/local/bin/.shell/sh/libs/install-ng2.sh;;
+                nginx)      bash /usr/local/bin/.shell/sh/menus/nginx-menu.sh;;
                 react)      bash /usr/local/bin/.shell/sh/menus/react-menu.sh "$action";;
                 elastic)    bash /usr/local/bin/.shell/sh/menus/elastic-menu.sh "$action";;
 

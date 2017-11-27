@@ -3,6 +3,12 @@
 
 blueprints="/usr/local/bin/.shell/blueprints"
 
+echo -ne "project name: "
+read projectName
+mkdir $projectName
+cd ./$projectName
+pwd
+
 echoColor 'cyan-l' ' => creating webapp ...'
 
 mkdir src
