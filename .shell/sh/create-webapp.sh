@@ -17,6 +17,8 @@ echoColor 'green' '[+] src/img/'
 mkdir src/sass
 echoColor 'green' '[+] src/sass/'
 
+cat ".some-style { color: #00adee }" > src/app.scss
+
 cat $blueprints/index.html > src/index.html
 echoColor 'green' '[+] src/index.html'
 

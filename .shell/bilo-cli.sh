@@ -19,7 +19,7 @@ cli misc:"
 echoColor 'yellow' "
     -d|--delete)         delete bilo-cli
     -h|--help)           shows help menu
-    -i|--install)        installs cli from (src: ~/Dev/Midnite/bilo-cli/)
+    -i|--install)        installs cli from (src: ~/Midnite/bilo-cli/)
     -u|--update)         update cli: get latest source and install
     -v|--version)        show version of bilo-cli
 "
@@ -43,7 +43,7 @@ Action() {
         case "$arg" in
                 -h|--help)     Start;;
                 -d|--delete)    bash ~/Dev/Midnite/bilo-cli/.shell/delete-cli.sh;;
-                -i|--install)    bash ~/Dev/Midnite/bilo-cli/.shell/install-cli.sh;;
+                -i|--install)    bash ~/Midnite/bilo-cli/.shell/install-cli.sh;;
                 -u|--update)    bash ~/Dev/Midnite/bilo-cli/.shell/update-cli.sh;;
                 -v|--version)  echoColor 'cyan-l' "v$cliVersion";;
 
