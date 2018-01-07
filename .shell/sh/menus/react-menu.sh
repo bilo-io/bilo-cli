@@ -12,21 +12,21 @@ Docs() {
 "
 echo "commands: "
 echoColor 'cyan-l' "
-    init)          creates react app with Redux, Webpack, Express & SASS
-    component)     removes: node_modules, artifact & dist
-    container)     create a basic (named) component (that is stateless)
-    data)          create (global) data resource that is accessible from all pages
-    page)          create a redux linked (named) page (that is stateful, i.e. uses redux)
+    i | init)           creates react app with Redux, Webpack, Express & SASS
+    cpt | component)    removes: node_modules, artifact & dist
+    cnt | container)    create a basic (named) component (that is stateless)
+    data)               create (global) data resource that is accessible from all pages
+    page)               create a redux linked (named) page (that is stateful, i.e. uses redux)
 "
 }
 Action() {
         arg=$1
         case "$arg" in
                 # react scripts
-                init)       bash /usr/local/bin/.shell/sh/frameworks/react/_init.sh ;;
-                component)  bash /usr/local/bin/.shell/sh/frameworks/react/add-component.sh;;
-                container)  bash /usr/local/bin/.shell/sh/frameworks/react/add-container.sh;;
-                data)       bash /usr/local/bin/.shell/sh/frameworks/react/add-data.sh;;
+                i | init)           bash /usr/local/bin/.shell/sh/frameworks/react/_init.sh ;;
+                cpt | component)    bash /usr/local/bin/.shell/sh/frameworks/react/add-component.sh;;
+                cnt | container)    bash /usr/local/bin/.shell/sh/frameworks/react/add-container.sh;;
+                data)               bash /usr/local/bin/.shell/sh/frameworks/react/add-data.sh;;
                 page)       bash /usr/local/bin/.shell/sh/frameworks/react/add-page.sh;;
                 # default handlers
                 h|help)     Start;;
