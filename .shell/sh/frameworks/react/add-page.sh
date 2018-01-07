@@ -7,7 +7,7 @@ path="./src/app/pages/$name"
 mkdir $path
 echoColor 'green-l' "[+] $path"
 
-cat $blueprints_react/component.js >> $path/component.js
+cat $blueprints_react/component-class.js >> $path/component.js
 echoColor 'green' "[+] - component.js"
 
 cat $blueprints_react/redux-container.js >> $path/index.js

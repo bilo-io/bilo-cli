@@ -14,7 +14,7 @@ cat $blueprints_react/redux-container.js >> $path/index.js
 sed "s/MyComponent/$name/g" $path/index.js
 echoColor 'green' "[+] - index.js"
 
-cat $blueprints_react/component.js >> $path/component.js
+cat $blueprints_react/component-class.js >> $path/component.js
 echoColor 'green' "[+] - component.js"
 
 cat $blueprints_react/redux-reducer.js >> $path/reducer.js
