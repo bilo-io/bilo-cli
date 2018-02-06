@@ -1,13 +1,9 @@
 import { combineReducers } from 'redux';
 // Pages
-import myComponentReducer from './pages/my-component/reducer';
-import myContainerReducer from './pages/my-container/reducer';
+import reducer from './pages/home/reducer';
 // Containers
 const rootReducer = combineReducers({
-    // Pages
-    myComponent: myComponentReducer,
-    // Containers
-    myContainer: myContainerReducer
+    reducer
 })
 
 export default rootReducer;

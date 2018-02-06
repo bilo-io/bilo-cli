@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import MyComponent from './component'
-
+import React, { Component }  from 'react'
 import {
     myAction
 } from './actions';
+import './style.scss'
 
 const mapStateToProps = (state, ownProps) => {
     let _state = state.mycomponent;
@@ -15,6 +15,16 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         myAction: () => dispatch(myAction())
+    }
+}
+
+
+export default class MyComponent extends Component {
+    render() {
+        return (
+            <div className='page'>
+            </div>
+        )
     }
 }
 
