@@ -9,7 +9,7 @@ mkdir src
 echoColor 'green' '[+] src/'
 
 mkdir src/app
-echoColor 'green' '[+] src/app/'
+echoColor 'green' '[+] src/'
 
 mkdir src/routes
 echoColor 'green' '[+] src/routes'

@@ -36,18 +36,18 @@ cat $blueprints/react/index.html > src/index.html
 echoColor 'green' '[+] src/index.js'
 cat $blueprints/react/index.js > src/index.js
 # - APP.JS
-echoColor 'green' '[+] src/app/app.js'
-cat $blueprints/react/app.js > src/app/app.js
+echoColor 'green' '[+] src/app.js'
+cat $blueprints/react/app.js > src/app.js
 
-mkdir src/app/components
-mkdir src/app/containers
-mkdir src/app/data
-mkdir src/app/pages
+mkdir src/components
+mkdir src/containers
+mkdir src/data
+mkdir src/pages
 echoColor 'green' "
-[+] src/app/components
-[+] src/app/containers
-[+] src/app/data
-[+] src/app/pages"
+[+] src/components
+[+] src/containers
+[+] src/data
+[+] src/pages"
 
 echoColor 'cyan-l' '
  => init-react: DONE

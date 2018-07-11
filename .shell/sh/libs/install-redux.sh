@@ -12,7 +12,7 @@ npm install \
     redux-logger \
 --save-dev
 
-path="./src/app/"
+path="./src/"
 blueprints_react="/usr/local/bin/.shell/blueprints/react"
 
 echoColor 'green-l' "[+] $path"

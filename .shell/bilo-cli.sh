@@ -6,15 +6,15 @@ cliVersion="0.0.1"
 Docs() {
     clear
     echoColor 'cyan' "
-______ ___________                  __________ 
+______ ___________                  __________
 ___  /____(_)__  /_____       _________  /__(_)
-__  __ \_  /__  /_  __ \_______  ___/_  /__  / 
-_  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /  
-/_.___//_/  /_/  \____/       \___/ /_/  /_/   
+__  __ \_  /__  /_  __ \_______  ___/_  /__  /
+_  /_/ /  / _  / / /_/ //_____/ /__ _  / _  /
+/_.___//_/  /_/  \____/       \___/ /_/  /_/
 
 Use this CLI to rapidly setup frontend and backend projects!
 ------------------------------------------------------------
-    
+
 cli misc:"
 echoColor 'yellow' "
     -d|--delete)         delete bilo-cli
@@ -32,7 +32,7 @@ echoColor 'purple' "
 echoColor 'cyan' "
     webapp)             initializes webapp with NodeJS & SASS
     webapi)             initializes webapi with NodeJS & express"
-echoColor 'green' "        
+echoColor 'green' "
     elastic)            elasticsearch cli utility ( bulk import, start server, etc.)
     nginx)              shows nginx help
     react)              react.js cli utility (init app, add files, etc.)
@@ -66,7 +66,7 @@ Action() {
                 elastic)    bash /usr/local/bin/.shell/sh/menus/elastic-menu.sh "$action";;
 
                 --) shift;;  # no more options
-                *) 
+                *)
                     setColor orange
                     echo "the option '$arg' does not exist ... exiting"
                     resetColor

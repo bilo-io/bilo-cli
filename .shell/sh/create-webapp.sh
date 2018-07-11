@@ -14,16 +14,16 @@ echoColor 'cyan-l' ' => creating webapp ...'
 mkdir src
 echoColor 'green' '[+] src/'
 
-mkdir src/app
-echoColor 'green' '[+] src/app/'
+mkdir src
+echoColor 'green' '[+] src/'
 
 mkdir src/img
 echoColor 'green' '[+] src/img/'
 
-mkdir src/sass
-echoColor 'green' '[+] src/sass/'
+mkdir src/styles
+echoColor 'green' '[+] src/styles/'
 
-cat ".some-style { color: #00adee }" > src/app.scss
+cat $blueprints/app.scss > src/app.scss
 
 cat $blueprints/index.html > src/index.html
 echoColor 'green' '[+] src/index.html'

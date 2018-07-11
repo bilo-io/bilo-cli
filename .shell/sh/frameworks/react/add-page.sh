@@ -3,7 +3,7 @@
 echo "adding React page... name?"
 read name
 blueprints_react="/usr/local/bin/.shell/blueprints/react"
-path="./src/app/pages/$name"
+path="./src/pages/$name"
 mkdir $path
 echoColor 'green-l' "[+] $path"
 

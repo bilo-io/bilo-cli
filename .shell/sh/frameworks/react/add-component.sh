@@ -15,7 +15,7 @@ blueprints_react="/usr/local/bin/.shell/blueprints/react"
 
 echo -ne "name:"
 read name
-path="./src/app/components/$name"
+path="./src/components/$name"
 mkdir $path
 echoColor 'green-l' "[+] $path"
 

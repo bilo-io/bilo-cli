@@ -6,7 +6,7 @@ blueprints_react="/usr/local/bin/.shell/blueprints/react"
 echoColor 'cyan-l' "adding Redux data" 
 echo -ne "name:"
 read name
-path="./src/app/data/$name"
+path="./src/data/$name"
 mkdir $path
 
 cat $blueprints_react/redux-reducer.js >> $path/reducer.js

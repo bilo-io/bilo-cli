@@ -49,18 +49,18 @@ function setColor {
 
         "orange") assignColor $ORANGE;;
         "yellow") assignColor $YELLOW;;
-        
+
         "blue") assignColor $BLUE;;
         "blue-l") assignColor $BLUE_LIGHT;;
-        
+
         "purple") assignColor $PURPLE;;
         "purple-l") assignColor $PURPLE_LIGHT;;
-        
+
         "cyan") assignColor $CYAN;;
         "cyan-l") assignColor $CYAN_LIGHT;;
-        
+
         "*")
-            assignColor red 
+            assignColor red
             echo -e "$1 is not a registered color"
             resetColor
             exit 1

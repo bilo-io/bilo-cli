@@ -6,7 +6,7 @@ blueprints_react="/usr/local/bin/.shell/blueprints/react"
 echoColor 'cyan-l' "adding React container" 
 echo -ne "name:"
 read name
-path="./src/app/containers/$name"
+path="./src/containers/$name"
 mkdir $path
 echoColor 'green-l' "[+] $path"
 

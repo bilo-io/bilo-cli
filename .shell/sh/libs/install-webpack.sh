@@ -7,6 +7,7 @@ echoColor 'green' '[+] webpack.config.js'
 echoColor 'cyan-l' ' => init-webpack ...'
 npm install \
     webpack \
+    webpack-cli \
     webpack-dev-server \
     html-webpack-plugin \
 --save-dev
