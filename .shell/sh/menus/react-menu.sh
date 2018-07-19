@@ -5,10 +5,10 @@
 Docs() {
     # clear
     echoColor 'cyan' "
-                     __ 
+                     __
   _______ ___  _____/ /_
  / __/ -_) _ \/ __/ __/
-/_/  \__/\_,_/\__/\__/ 
+/_/  \__/\_,_/\__/\__/
 "
 echo "commands: "
 echoColor 'cyan-l' "
@@ -31,7 +31,7 @@ Action() {
                 # default handlers
                 h|help)     Start;;
                 --) shift;;  # no more options
-                *) 
+                *)
                     setColor orange
                     echo "the option '$arg' does not exist ... exiting"
                     resetColor

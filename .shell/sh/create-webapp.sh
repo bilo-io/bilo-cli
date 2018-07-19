@@ -11,8 +11,11 @@ pwd
 
 echoColor 'cyan-l' ' => creating webapp ...'
 
-mkdir src
-echoColor 'green' '[+] src/'
+mkdir scripts
+echoColor 'green' '[+] scripts/'
+cp -r $blueprints/utils/* scripts
+echoColor 'cyan-l' ' - deploy.sh'
+echoColor 'cyan-l' ' - semver.js'
 
 mkdir src
 echoColor 'green' '[+] src/'
